@@ -10,5 +10,5 @@ script:
 # Following command is failing so commenting it for now
 #- docker run -e CI=true ashok/docker-react npm run test
 
-# just run the image in container and skip tests, hopefully it should return 0 and travis build will be successful
-  - docker run ashok/docker-react
+# just run the image in container and and execute date command, hopefully it should return 0 and travis build will be successful
+  - docker run ashok/docker-react date
