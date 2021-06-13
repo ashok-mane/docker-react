@@ -13,6 +13,7 @@ script:
 # just run the image in container and and execute date command, hopefully it should return 0 and travis build will be successful
   - docker run ashok/docker-react date
 
+
 deploy:
   provider: elasticbeanstalk
   region: "ap-south-1"
