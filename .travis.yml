@@ -12,3 +12,15 @@ script:
 
 # just run the image in container and and execute date command, hopefully it should return 0 and travis build will be successful
   - docker run ashok/docker-react date
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "docker-react"
+  env: "Dockerreact-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-386429311478"
+  bucket_path: "docker-react"
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
